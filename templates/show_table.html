@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>学生信息展示</title>
+</head>
+
+<body>
+    <h1>学生</h1>
+    <table border="1">
+        <tr>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>年级</th>
+            <th>班级</th>
+            <th>专业码</th>
+            <th>状态</th>
+            <th>密码</th>
+        </tr>
+        {% for tmp in students %}
+        <tr>
+            <td>{{ tmp[0] }}</td>
+            <td>{{ tmp[1] }}</td>
+            <td>{{ tmp[2] }}</td>
+            <td>{{ tmp[3] }}</td>
+            <td>{{ tmp[4] }}</td>
+            <td>{{ tmp[5] }}</td>
+            <td>{{ tmp[6] }}</td>
+            <td>{{ tmp[7] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+<body>
+    <h1>专业</h1>
+    <table border="1">
+        <tr>
+            <th>专业代码</th>
+            <th>专业名称</th>
+            <th>专业图片</th>
+            <th>专业人数</th>
+        </tr>
+        {% for tmp in majors %}
+        <tr>
+            <td>{{ tmp[0] }}</td>
+            <td>{{ tmp[1] }}</td>
+            <!-- <td>{{ tmp[2] }}</td> -->
+            <!-- <td><img src={{tmp[2]}} alt="专业图片" width="100" height="100"></td> -->
+            <td> <img src="data:image/png;base64,{{tmp[2]}}" alt="Image"></td>
+            <td>{{ tmp[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+<body>
+    <h1>课程</h1>
+    <table border="1">
+        <tr>
+            <th>课程代码</th>
+            <th>课程名称</th>
+        </tr>
+        {% for tmp in courses %}
+        <tr>
+            <td>{{ tmp[0] }}</td>
+            <td>{{ tmp[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+<body>
+    <h1>成绩</h1>
+    <table border="1">
+        <tr>
+            <th>成绩代码</th>
+            <th>课程代码</th>
+            <th>课程名</th>
+            <th>学生姓名</th>
+            <th>学生学号</th>
+            <th>分数</th>
+        </tr>
+        {% for tmp in scores %}
+        <tr>
+            <td>{{ tmp[0] }}</td>
+            <td>{{ tmp[1] }}</td>
+            <td>{{ tmp[2] }}</td>
+            <td>{{ tmp[3] }}</td>
+            <td>{{ tmp[4] }}</td>
+            <td>{{ tmp[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+<style>
+    body {
+        background-image: url('https://www.pexels.com/zh-cn/photo/305821/');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+</style>
+
+<a href="/show_table">查看学生信息</a>
+
+</html>

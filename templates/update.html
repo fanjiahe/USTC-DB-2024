@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+body {
+    background-image: url('https://www.pexels.com/zh-cn/photo/305821/');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+</style>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Management System</title>
+</head>
+<body>
+<h1>Student Management System</h1>
+
+<!-- 学生信息录入表单 -->
+<h2>增加学生</h2>
+<form action="/add_student" method="POST">
+    <label for="student_id">student_id:</label><br>
+    <input type="text" id="student_id" name="student_id" required><br>
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br>
+    <label for="gender">gender:</label><br>
+    <input type="text" id="gender" name="gender" required><br>
+    <label for="grade">grade:</label><br>
+    <input type="text" id="grade" name="grade" required><br>
+    <label for="class">Class:</label><br>
+    <input type="text" id="class" name="class" required><br>
+    <label for="major_code">major_code:</label><br>
+    <input type="text" id="major_code" name="major_code" required><br>
+    <label for="status">status:</label><br>
+    <input type="text" id="status" name="status" required><br>
+    <label for="password">password:</label><br>
+    <input type="text" id="password" name="password" required><br>
+    <button type="submit">Submit</button>
+</form>
+
+<!-- 学生信息删除表单 -->
+<h2>删除学生</h2>
+<form action="/delete_student" method="POST">
+    <label for="delete_sid">Student ID:</label><br>
+    <input type="text" id="delete_sid" name="student_id" required><br>
+    <button type="submit">Delete</button>
+</form>
+
+<!-- 学生信息修改表单 -->
+<h2>修改学生信息</h2>
+<form action="/update_student" method="POST">
+    <label for="update_sid">待修改的学生 ID:</label><br>
+    <input type="text" id="update_sid" name="student_id" required><br>
+    <label for="update_name">姓名:</label><br>
+    <input type="text" id="update_name" name="name" required><br>
+    <label for="update_gender">性别:</label><br>
+    <input type="text" id="update_gender" name="gender" required><br>
+    <label for="update_grade">年级:</label><br>
+    <input type="text" id="update_grade" name="grade" required><br>
+    <label for="update_class">班级:</label><br>
+    <input type="text" id="update_class" name="class" required><br>
+    <label for="update_majorcode">专业代码:</label><br>
+    <input type="text" id="update_majorcode" name="major_code" required><br>
+    <label for="update_status">状态:</label><br>
+    <input type="text" id="update_status" name="status" required><br>
+    <label for="update_password">密码:</label><br>
+    <input type="text" id="update_password" name="password" required><br>
+    <button type="submit">Update</button>
+</form>
+
+<!-- 学生信息查询表单 -->
+<h2>查询学生</h2>
+<form action="/search_student" method="POST">
+    <label for="search_sid">Student ID:</label><br>
+    <input type="text" id="search_sid" name="student_id" required><br>
+    <button type="submit">Search</button>
+</form>
+
+<!-- 按性别查找学生 -->
+<h2>将学生按性别分类</h2>
+<form action="/get_boy_or_girl" method="POST">
+    <label for="search_gen">Student gender:</label><br>
+    <input type="text" id="search_gen" name="gender" required><br>
+    <button type="submit">Search</button>
+</form>
+
+<!-- 按专业查找学生 -->
+<h2>将学生按专业分类</h2>
+<form action="/get_student_by_major" method="POST">
+<label for="search_major">Student major code:</label><br>
+<input type="text" id="search_major" name="major_code" required><br>
+<button type="submit">Search</button>
+</form>
+
+<!-- 学生转专业 -->
+<h2>学生转专业</h2>
+<form action="/change_major" method="POST">
+<label for="change_sid">Student ID:</label><br>
+<input type="text" id="change_sid" name="student_id" required><br>
+<label for="change_major">New major code:</label><br>
+<input type="text" id="change_major" name="major_code" required><br>
+<button type="submit">Change</button>
+
+</form>
+
+<br>
+<a href="/show_table">查看学生信息</a>
+</body>
+</html>

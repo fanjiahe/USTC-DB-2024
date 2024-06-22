@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    body {
+        background-image: url('https://www.pexels.com/zh-cn/photo/1054218/');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Button</title>
+    <style>
+        /* 样式化按钮 */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* 悬停时更改背景颜色 */
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生学籍管理</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>学生学籍管理</h1>
+        <form action="/login" method="post">
+            <label for="student_id">学号:</label>
+            <input type="text" id="student_id" name="student_id" required><br>
+            <label for="password">密码:</label>
+            <input type="password" id="password" name="password" required><br>
+            <input type="submit" value="查看成绩">
+            <!-- <a href="/show_table">查看学生信息</a> -->
+            <a href="/show_table" class="button">查看所有表格</a>
+            <a href="/update" class="button">学生信息修改</a>
+
+
+        </form>
+
+    </div>
+</body>
+
+
+    
+
+
+</html>
